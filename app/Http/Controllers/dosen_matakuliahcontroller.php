@@ -6,23 +6,25 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\dosen_matakuliah;
-class dosen_matakuliahcontroller extends Controller
+
+class Dosen_matakuliahController extends Controller
 {
-     public function awal()
+    //
+    public function awal()
     {
-
-    	return "dosen_matakuliahcontroller";
+    	return "hello dari dosen_matakuliah controller";
     }
-
-    public function tambah(){
-    		return $this->simpan();
+    public function tambah()
+    {
+    	return $this->simpan();
     }
+    public function simpan()
+    {
+    	$dosen_matakuliah = new dosen_matakuliah();
+    	$dosen_matakuliah->dosen_id = '1';
+    	$dosen_matakuliah->matakuliah_id = '1';
 
-    public function simpan(){
-    	$Dosen_matakuliah = new dosen_matakuliah();
-    	$Dosen_matakuliah ->dosen_id =3;
-    	$Dosen_matakuliah ->matakuliah_id =1;
-    	$Dosen_matakuliah ->save();
-    	return"Data dengan id Dosen {$Dosen_matakuliah->dosen_id} telah disimpan";
+    	$dosen_matakuliah->save();
+    	return "data dengan dosen_matakuliah {$dosen_matakuliah->dosen_id} telah disimpan";
     }
 }
