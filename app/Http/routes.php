@@ -42,7 +42,7 @@ Route::get('ruangan/hapus/{ruangan}','penggunaController@hapus');
 
 Route::get('pengguna','penggunaController@awal');
 Route::get('pengguna/tambah','penggunaController@tambah');
-Route::get('pengguna/atul',function() // tugas yang enda dapat point
+Route::get('pengguna/noona',function() // tugas yang enda dapat point
     {
     	$pengguna = new App\pengguna();
     	$pengguna->username = 'nonik';

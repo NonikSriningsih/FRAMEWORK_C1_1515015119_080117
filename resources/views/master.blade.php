@@ -61,7 +61,15 @@
 							<li class="divider"></li>
 							<li><a href="{{ url('ruangan') }}">Ruangan</a></li>
 							<li class="divider"></li>
-							<li><a href="{{ url('matakuliah') }}">Matakuliah</a></li>							
+							<li><a href="{{ url('matakuliah') }}">Matakuliah</a></li>	
+							<li class="divider"></li>
+							<li><a href="{{ url('jadwal_matakuliah') }}">Jadwal_Matakuliah</a></li>	
+							<li class="divider"></li>
+							<li><a href="{{ url('dosen_matakuliah') }}">Dosen_Matakuliah</a></li>
+							<li class="divider"></li>
+							<li><a href="{{ url('mahasiswa') }}">Mahasiswa</a></li>	
+							<li class="divider"></li>
+							<li><a href="{{ url('dosen') }}">Dosen</a></li>							
 						</ul>
 					</li>
 				</ul>
