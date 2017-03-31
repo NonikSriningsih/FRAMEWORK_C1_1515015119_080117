@@ -10,9 +10,9 @@
 		<thead>
 			<tr>
 				<th>No.</th>
-				<th>Nama jadwal_matakuliah</th>
+				<th>ID Mahasiswa yang Mengikuti Perkuliahan</th>
 				<th>Ruangan untuk Kuliah</th>
-				<th>Dosen yang mengajar Kuliah</th>
+				<th>ID Dosen yang mengajar Kuliah</th>
 				<th>Aksi</th>
 			</tr>
 		</thead>
@@ -23,7 +23,7 @@
 				<td>{{ $x++}}</td>
 				<td>{{ $jadwal_matakuliah->mahasiswa_id or 'title kosong' }}</td>
 				<td>{{ $jadwal_matakuliah->ruangan_id or 'keterangan kosong' }}</td>
-				<td>{{ $jadwal_matakuliah->dosen_matakuliah or 'keterangan kosong' }}</td>
+				<td>{{ $jadwal_matakuliah->dosen_matakuliah_id or 'keterangan kosong' }}</td>
 				<td>
 					<div class="btn-group" role="group">
 						<a href="{{url('jadwal_matakuliah/edit/'.$jadwal_matakuliah->id)}}" class="btn btn-warning btn-xs" data-toogle="tooltip" data-placement="top" title="Ubah"><i class="fa fa-pencil"></i></a>

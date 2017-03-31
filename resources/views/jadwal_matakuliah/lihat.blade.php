@@ -18,7 +18,7 @@
 		<tr>
 			<td>Dosen yang mengajar</td>
 			<td>:</td>
-			<td>{{ $jadwal_matakuliah->dosen_matakuliah }}</td>
+			<td>{{ $jadwal_matakuliah->dosen_matakuliah_id }}</td>
 		</tr>
 		
 		<tr>

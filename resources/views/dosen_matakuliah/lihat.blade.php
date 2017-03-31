@@ -8,12 +8,12 @@
 		<tr>
 			<td>ID Dosen yang Mengajar</td>
 			<td>:</td>
-			<td>{{ $dosen_id->title }}</td>
+			<td>{{ $dosen_matakuliah->dosen_id }}</td>
 		</tr>
 		<tr>
 			<td>Matakuliah yang diajar</td>
 			<td>:</td>
-			<td>{{ $matakuliah_id->keterangan }}</td>
+			<td>{{ $dosen_matakuliah->matakuliah_id }}</td>
 		</tr>
 		<tr>
 			<td class="col-xs-4">Dibuat tanggal</td>

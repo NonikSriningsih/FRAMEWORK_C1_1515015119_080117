@@ -24,8 +24,8 @@ class Jadwal_matakuliahController extends Controller
     {
         $jadwal_matakuliah = new jadwal_matakuliah();
         $jadwal_matakuliah->mahasiswa_id = $input->mahasiswa_id;
-        $dosen_matakuliah->dosen_matakuliah_id = $input->dosen_matakuliah_id;
-        $dosen_matakuliah->ruangan_id = $input->ruangan_id;
+        $jadwal_matakuliah->ruangan_id = $input->ruangan_id;
+        $jadwal_matakuliah->dosen_matakuliah_id = $input->dosen_matakuliah_id;
         $informasi = $jadwal_matakuliah->save() ? 'berhasil simpan data' : 'gagal simpan data';
         return redirect('jadwal_matakuliah')->with(['infromasi'=>$informasi]);
     }
@@ -42,9 +42,9 @@ class Jadwal_matakuliahController extends Controller
     public function update($id, Request $input)
     {
         $jadwal_matakuliah = jadwal_matakuliah::find($id);
-        $jadwal_matakuliah->mahasiswa_id = $input->mahasiswa_id;
-        $dosen_matakuliah->dosen_matakuliah_id = $input->dosen_matakuliah_id;
-        $dosen_matakuliah->ruangan_id = $input->ruangan_id;
+                $jadwal_matakuliah->mahasiswa_id = $input->mahasiswa_id;
+        $jadwal_matakuliah->ruangan_id = $input->ruangan_id;
+        $jadwal_matakuliah->dosen_matakuliah_id = $input->dosen_matakuliah_id;
         $informasi = $jadwal_matakuliah->save()? 'berhasil update data' : 'gagal update data';
         return redirect('jadwal_matakuliah')->with(['informasi'=>$informasi]);
     }

@@ -22,10 +22,10 @@
 			@foreach ($data as $dosen)
 			<tr>
 				<td>{{ $x++}}</td>
-				<td>{{ $dosen->Nama or 'Nama kosong' }}</td>
-				<td>{{ $dosen->Nomor NIP or 'Nomor NIP kosong' }}</td>
-				<td>{{ $dosen->Alamat Dosen or 'Alamat Dosen kosong' }}</td>
-				<td>{{ $dosen->Pengguna id or 'Pengguna id kosong' }}</td>
+				<td>{{ $dosen->nama or 'Nama kosong' }}</td>
+				<td>{{ $dosen->nip or 'Nomor NIP kosong' }}</td>
+				<td>{{ $dosen->alamat or 'Alamat Dosen kosong' }}</td>
+				<td>{{ $dosen->pengguna_id or 'Pengguna id kosong' }}</td>
 				<td>
 					<div class="btn-group" role="group">
 						<a href="{{url('dosen/edit/'.$dosen->id)}}" class="btn btn-warning btn-xs" data-toogle="tooltip" data-placement="top" title="Ubah"><i class="fa fa-pencil"></i></a>
