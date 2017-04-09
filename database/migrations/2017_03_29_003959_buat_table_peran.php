@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class BuatTableKaryawan extends Migration
+class BuatTablePeran extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,11 @@ class BuatTableKaryawan extends Migration
      */
     public function up()
     {
-        Schema::create('karyawan', function (Blueprint $table) {
+        Schema::create('peran', function(Blueprint $table)
+        {
             $table->increments('id');
-            $table->string('nama');
-            $table->string('alamat');
             $table->integer('pengguna_id',false,true);
-            $table->foreign('pengguna_id')->references('id')->on('pengguna');
+            $table->foreign('pengguna_id')->references('id')->on('pengguna')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -29,9 +28,6 @@ class BuatTableKaryawan extends Migration
      */
     public function down()
     {
-        Schema::table('karyawan',function($table)
-        {
-            $table->dropForeign('karyawan_pengguna_id_foreign');
-        }); ///rollback untuk memfungsikan function down
+        //
     }
 }

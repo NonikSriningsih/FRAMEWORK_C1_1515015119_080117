@@ -19,7 +19,7 @@
 			@foreach ($data as $ruangan)
 			<tr>
 				<td>{{ $x++}}</td>
-				<td>{{ $ruangan->title or 'Ruangan Kosong' }}</td>
+				<td>{{ $ruangan->title or 'Ruangan Kosong'}}</td>
 				<td>
 					<div class="btn-group" role="group">
 						<a href="{{url('ruangan/edit/'.$ruangan->id)}}" class="btn btn-warning btn-xs" data-toogle="tooltip" data-placement="top" title="Ubah"><i class="fa fa-pencil"></i></a>

@@ -3,7 +3,7 @@
 <div class="panel panel-default">
 	<div class="panel-heading">
 		<strong>Seluruh Data Matakuliah</strong>
-		<a href="{{url('matakuliah/tambah')}}" class="btn btn-xs btn-primary pull-right"><i class="fa fa-plus"></i> Matakuliah</a>
+		<a href="{{url('matakuliah/tambah')}}" class="btn btn-xs btn-primary pull-right"><i class="fa fa-plus"></i>Matakuliah</a>
 		<div class="clearfix"></div>
 	</div>
 	<table class="table">
@@ -17,11 +17,11 @@
 		</thead>
 		<tbody>
 			<?php $x=1; ?>
-			@foreach ($data as $matakuliah)
+			@foreach ($semuaMatakuliah as $matakuliah)
 			<tr>
 				<td>{{ $x++}}</td>
-				<td>{{ $matakuliah->title or 'title kosong' }}</td>
-				<td>{{ $matakuliah->keterangan or 'keterangan kosong' }}</td>
+				<td>{{ $matakuliah->title or 'title Kosong'}}</td>
+				<td>{{ $matakuliah->keterangan or 'keterangan Kosong'}}</td>
 				<td>
 					<div class="btn-group" role="group">
 						<a href="{{url('matakuliah/edit/'.$matakuliah->id)}}" class="btn btn-warning btn-xs" data-toogle="tooltip" data-placement="top" title="Ubah"><i class="fa fa-pencil"></i></a>

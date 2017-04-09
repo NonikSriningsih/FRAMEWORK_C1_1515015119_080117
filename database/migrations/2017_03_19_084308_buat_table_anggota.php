@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class BuatUbahKaryawan extends Migration
+class BuatTableAnggota extends Migration
 {
     /**
      * Run the migrations.
@@ -12,7 +12,13 @@ class BuatUbahKaryawan extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('anggota', function(Blueprint $table)
+        {
+            $table->increments('id');
+            $table->string('nama');
+            $table->string('alamat');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -22,6 +28,6 @@ class BuatUbahKaryawan extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('anggota');
     }
 }

@@ -38,7 +38,8 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
+                <div class="title">Nama : Fetrisye Delp Parenden</div>
+                <div class="title">NIM : 1515015138</div>
             </div>
         </div>
     </body>
